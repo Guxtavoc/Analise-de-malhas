@@ -26,9 +26,9 @@ O sistema recebe valores de resistências, fontes e demais elementos do circuito
 
 src/
 ├─ main/
-│ ├─ java/
-│ ├─ resources/
-└─ test/
+   ├─ java/
+   ├─ resources/
+
 
 A pasta `resources` contém os arquivos FXML e demais elementos da interface.
 A pasta `java` controladores e codigo fonte da aplicação
