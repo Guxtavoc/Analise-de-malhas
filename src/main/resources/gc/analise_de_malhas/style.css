@@ -1,0 +1,69 @@
+/* ======= ESTILO BASE ======= */
+
+.root {
+    -fx-font-family: "Segoe UI";
+    -fx-background-color: #f5f6fa;
+}
+
+.label {
+    -fx-text-fill: #2d3436;
+}
+
+.button {
+    -fx-background-color: linear-gradient(to bottom, #74b9ff, #0984e3);
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 8 15;
+    -fx-background-radius: 6;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: linear-gradient(to bottom, #81ecec, #00cec9);
+}
+
+.text-field {
+    -fx-background-color: white;
+    -fx-border-color: #dfe6e9;
+    -fx-border-radius: 4;
+    -fx-padding: 6;
+}
+
+.text-field:focused {
+    -fx-border-color: #0984e3;
+}
+
+/* ======= SCROLLS ======= */
+.scroll-pane {
+    -fx-background-color: transparent;
+}
+
+.scroll-pane .viewport {
+    -fx-background-color: transparent;
+}
+
+/* ======= PAINÉIS ======= */
+.vbox {
+    -fx-spacing: 8;
+}
+
+/* Cartões bonitos */
+.card {
+    -fx-background-color: white;
+    -fx-background-radius: 6;
+    -fx-padding: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 6, 0, 0, 1);
+}
+
+/* Equações monoespaçadas */
+.equacao {
+    -fx-font-family: "Consolas";
+    -fx-font-size: 14px;
+}
+
+/* Resultados em destaque */
+.resultado {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #0984e3;
+}

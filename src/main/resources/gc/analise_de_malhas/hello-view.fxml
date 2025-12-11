@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="gc.analise_de_malhas.HelloController"
+            prefWidth="900" prefHeight="700"
+            stylesheets="@style.css">
+
+    <!-- Top Header -->
+    <top>
+        <HBox spacing="15" alignment="CENTER_LEFT">
+            <padding>
+                <Insets top="15" right="15" bottom="15" left="15"/>
+            </padding>
+
+            <Label text="Análise de Malhas — Método das Correntes" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+
+            <Pane HBox.hgrow="ALWAYS"/>
+
+            <Label text="Número de Malhas:"/>
+            <TextField fx:id="quantidadeMalhas" prefWidth="60"/>
+
+            <Button text="Gerar Malhas" onAction="#gerarMalhas"/>
+            <Button text="Criar Campos de Valores" onAction="#InputValores"/>
+            <Button text="Gerar Equações" onAction="#outputEquacoes"/>
+            <Button text="Calcular Corrente" onAction="#resolverSistema"/>
+        </HBox>
+    </top>
+
+    <!-- Main Body -->
+    <center>
+        <SplitPane dividerPositions="0.33, 0.66">
+
+            <!-- Painel 1 — Entradas das malhas -->
+            <ScrollPane fitToWidth="true">
+                <VBox fx:id="boxMalhas" spacing="10">
+                    <padding>
+                        <Insets top="15" right="15" bottom="15" left="15"/>
+                    </padding>
+                </VBox>
+            </ScrollPane>
+
+            <!-- Painel 2 — Campos de valores -->
+            <ScrollPane fitToWidth="true">
+                <VBox fx:id="inputValores" spacing="10">
+                    <padding>
+                        <Insets top="15" right="15" bottom="15" left="15"/>
+                    </padding>
+                </VBox>
+            </ScrollPane>
+
+            <!-- Painel 3 — Equações e resultados -->
+            <ScrollPane fitToWidth="true">
+                <VBox spacing="20">
+                    <padding>
+                        <Insets top="15" right="15" bottom="15" left="15"/>
+                    </padding>
+
+                    <VBox spacing="10">
+                        <Label text="Equações Geradas" style="-fx-font-size: 16; -fx-font-weight: bold;"/>
+                        <VBox fx:id="painelEquacoes" spacing="6"/>
+                    </VBox>
+
+                    <Separator/>
+
+                    <VBox spacing="10">
+                        <Label text="Resultados (Correntes)" style="-fx-font-size: 16; -fx-font-weight: bold;"/>
+                        <VBox fx:id="painelResultados" spacing="6"/>
+                    </VBox>
+
+                </VBox>
+            </ScrollPane>
+
+        </SplitPane>
+    </center>
+</BorderPane>

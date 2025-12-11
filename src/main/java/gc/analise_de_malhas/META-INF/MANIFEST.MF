@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Main-Class: gc.analise_de_malhas.HelloApplication
+Class-Path: src/main/java/gc/analise_de_malhas/HelloApplication.java
+
